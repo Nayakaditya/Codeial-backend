@@ -1,0 +1,18 @@
+{
+  "name": "codeial-backend",
+  "version": "1.0.0",
+  "description": "Blog post application with passport authentication",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aditya Nayak",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.1",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
