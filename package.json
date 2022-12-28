@@ -4,13 +4,17 @@
   "description": "Blog post application with passport authentication",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch ./assets/scss -o ./assets/css"
   },
   "author": "Aditya Nayak",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
     "mongoose": "^6.8.1",
     "node-sass": "^8.0.0",
     "nodemon": "^2.0.20"

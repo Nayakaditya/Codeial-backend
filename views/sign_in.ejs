@@ -1,0 +1,20 @@
+<div class="signing-container">
+    <div class="page-title">
+        <h1>
+            Codeial | <span class="profile-title"><%= title %></span>
+        </h1>
+        <div class="form-container">
+            <form action="/users/create-session" method="POST">
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div>
+                    <button type="submit">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

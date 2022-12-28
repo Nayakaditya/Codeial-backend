@@ -1,0 +1,188 @@
+$ubuntu-font : 'Ubuntu',
+sans-serif;
+$primary-color : #0077ff;
+$primary-f-color : white;
+$secondary-color : orange;
+$br-10 : 10px;
+
+body {
+    margin: 0;
+    background-color: orange;
+    font-family: $ubuntu-font;
+}
+
+header {
+    margin: 0;
+    padding: 1rem 1rem;
+    background-color: $primary-color;
+    box-shadow: 0px 5px 80px 40px black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+
+    .nav-link {
+        a {
+            border-radius: $br-10;
+            border: 1px solid;
+            padding: .8rem 1.2rem;
+
+            &:hover {
+                background-color: white;
+                color: $primary-color;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-f-color;
+    }
+
+}
+
+.page-title {
+    color: $primary-f-color;
+    padding: 10rem;
+    background-color: #1b1b1b;
+    text-align: center;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200px;
+
+    .profile-title {
+        color: orange;
+    }
+
+    .form-container {
+        width: 350px;
+        font-size: 1.2em;
+
+        input {
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 1rem;
+            width: 80%;
+            font-size: 1.1em;
+            color: $secondary-color;
+            background-color: transparent;
+
+        }
+
+        ::placeholder {
+            font-size: 1.1em;
+            color: $primary-color;
+        }
+
+        button {
+            cursor: pointer;
+            border: 1px solid $primary-color;
+            background-color: transparent;
+            padding: .6rem 1.4rem;
+            border-radius: $br-10;
+            color: white;
+            font-size: 1.1em;
+
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+
+
+.curve {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    bottom: 0;
+
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 55%;
+        height: 100%;
+        background-color: orange;
+        transform: translate(85%, 60%);
+    }
+
+    &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 56%;
+        height: 100%;
+        background-color: #1b1b1b;
+        transform: translate(-4%, 40%);
+        z-index: -1;
+    }
+}
+
+
+.main-home-section {
+    margin-top: 150px;
+
+    .container {
+        margin: 0 1.3rem;
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+
+            .cards {
+                margin: 10px 0;
+                border: 1px solid;
+                width: 350px;
+                min-width: 300px;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+
+
+footer {
+    margin-top: 150px;
+    background-color: #1b1b1b;
+    color: white;
+
+    .footer-container {
+        margin: 1.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        p {
+            a {
+                text-decoration: none;
+                color: $primary-color;
+
+                &:hover {
+                    color: orange;
+                }
+            }
+        }
+    }
+
+    address {
+        text-align: center;
+    }
+}
+
+// 
