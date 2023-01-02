@@ -1,0 +1,100 @@
+$ubuntu-font : 'Ubuntu',
+sans-serif;
+$primary-color : #0077ff;
+$primary-f-color : white;
+$secondary-color : orange;
+$br-10 : 10px;
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    &>div {
+        width: 500px;
+        min-width: 300px;
+    }
+
+    .form-container {
+        .post-text {
+            h1 {
+                text-align: center;
+                font-size: 2em;
+            }
+        }
+
+        .forms {
+            display: grid;
+            place-items: center;
+
+            textarea {
+                border-radius: $br-10;
+                padding: 1rem 1.5rem;
+            }
+
+            .submit-btn {
+                display: grid;
+                place-items: center;
+
+                button {
+                    cursor: pointer;
+                    padding: .5rem 1rem;
+                    border-radius: $br-10;
+                    border: none;
+                    background-color: #1b1b1b;
+                    color: white;
+                    font-size: 1.3em;
+
+                    &:hover{
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .post-list-container{
+        display: grid;
+            place-items: center;
+        ul{
+
+            .show-status, .post-username{
+                border-top-left-radius: $br-10;
+                border-top-right-radius: $br-10;
+            }
+            .show-status{
+                border: 1px solid black;
+                margin: 10px 0;
+                border-bottom: 5px solid;
+                box-shadow: 0px 0px 4px 0px black;
+            }
+            .post-username{
+                background-color: #1b1b1b;
+                color: white;
+                padding: .1px 1rem;
+            }
+            li{
+                padding: 1rem;
+                font-size: 1.1em;
+                list-style: none;
+                background-color: rgb(233, 233, 233);
+            }
+        }
+    }
+}
+
+.comment-container{
+    input{
+        border: none;
+        padding: .3rem;
+        width: 85%;
+    }
+
+    button{
+        padding: 4px 20px;
+        color: white;
+        background-color: #1b1b1b;
+    }
+}

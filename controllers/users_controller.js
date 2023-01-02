@@ -8,6 +8,10 @@ module.exports.profile = function (req, res) {
 
 // Render the sign up page
 module.exports.signUp = function (req, res) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/users/profile');
+    }
+
     return res.render('sign_up', {
         title: "Sign Up"
     })
@@ -15,9 +19,17 @@ module.exports.signUp = function (req, res) {
 
 // Render the sign in page
 module.exports.signIn = function (req, res) {
-    return res.render('sign_in', {
-        title: "Sign In"
-    })
+    try{
+        if (req.isAuthenticated()) {
+            return res.redirect('/users/profile');
+        }
+    
+        return res.render('sign_in', {
+            title: "Sign In"
+        })
+    }catch(error){
+        console.log(`Error ${error}`);
+    }
 }
 
 // Get the sign up data
@@ -41,10 +53,24 @@ module.exports.create = function (req, res) {
                         console.log(`Error in creating a user while signing up ${err}`);
                         return;
                     }
-                    return res.redirect('/users/create-session');
+                    return res.redirect('/users/signin');
                 })
             } else {
                 return res.redirect('back');
             }
         })
+}
+
+// sign in and create a session for the user
+module.exports.createSession = function (req, res) {
+    return res.redirect('/');
+}
+
+module.exports.destroySession = function (req, res) {
+    req.logout(function (err) {
+        if (err) {
+            console.log(`Error in destroy session ${err}`);
+        }
+        return res.redirect('/');
+    })
 }

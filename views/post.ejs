@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/post.css">
+
+<div class="page-title">
+    <h1>
+        Codeial | <span class="profile-title">
+            <%= title %>
+        </span>
+    </h1>
+    <p>Make your post 😄</p>
+</div>
+
+<section class="post-container">
+    <% if(locals.user) { %>
+        <div class="form-container">
+            <div class="post-text">
+                <h1>Posts</h1>
+            </div>
+            <div class="forms">
+                <form action="/posts/create" method="post">
+                    <textarea name="content" cols="30" rows="5" placeholder="Type your post here..."
+                        required></textarea>
+                    <div class="submit-btn">
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <% } %>
+        <div class="post-list-container">
+                <ul>
+                    <% for(post of posts) { %>
+                        <div class="show-status">
+                            <div class="post-username">
+                                <p><%= post.user.name %></p>
+                            </div>
+                            <li>
+                                <%= post.content %>
+                            </li>
+                            <div>
+                                <%- include('./partials/_comments') -%>
+
+                            </div>
+                        </div>
+                    <% } %>
+                </ul>
+        </div>
+</section>
