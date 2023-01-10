@@ -63,6 +63,23 @@ header {
       font-size: 1.1em; }
       .page-title .form-container button:hover {
         background-color: #0077ff; }
+  .page-title .socail-auth {
+    margin-top: 50px; }
+    .page-title .socail-auth section a {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      background-color: #0077ff;
+      border-radius: 10px;
+      width: 250px; }
+      .page-title .socail-auth section a p {
+        margin-right: 20px; }
+      .page-title .socail-auth section a img {
+        border-radius: 10px;
+        background-color: white; }
 
 .curve {
   position: absolute;

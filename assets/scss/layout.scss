@@ -29,7 +29,7 @@ header {
             border: 1px solid;
             padding: .8rem 1.2rem;
             &:hover {
-                background-color: white;
+                background-color: $primary-f-color;
                 color: $primary-color;
             }
         }
@@ -86,11 +86,35 @@ header {
             background-color: transparent;
             padding: .6rem 1.4rem;
             border-radius: $br-10;
-            color: white;
+            color: $primary-f-color;
             font-size: 1.1em;
 
             &:hover {
                 background-color: $primary-color;
+            }
+        }
+    }
+
+    .socail-auth{
+        margin-top: 50px;
+        section{
+            a{
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                color: $primary-f-color;
+                background-color: $primary-color;
+                border-radius: 10px;
+                width: 250px;
+                p{
+                    margin-right: 20px;
+                }
+                img{
+                    border-radius: 10px;
+                    background-color: $primary-f-color;
+                }
             }
         }
     }
@@ -168,7 +192,7 @@ header {
                 }
 
                 &:hover{
-                    color: white;
+                    color: $primary-f-color;
                     background-color: #1b1b1b;
                     transform: translateY(-10%);
                 }
@@ -183,7 +207,7 @@ header {
 footer {
     margin-top: 150px;
     background-color: #1b1b1b;
-    color: white;
+    color: $primary-f-color;
 
     .footer-container {
         margin: 1.3rem;
